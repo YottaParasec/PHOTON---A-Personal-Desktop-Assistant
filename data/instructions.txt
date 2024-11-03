@@ -1,0 +1,4 @@
+Upload all your local files in the data folder:
+├── data/
+│   ├── pdf1
+│   └── pdf2
