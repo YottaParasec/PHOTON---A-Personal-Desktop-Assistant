@@ -7,15 +7,14 @@ import numpy as np
 import sounddevice as sd
 import wavio
 import keyboard  # To detect key press
-from pydub import AudioSegment
-from pydub.playback import play
+import soundfile as sf
 from threading import Thread
 from queue import Queue
 from collections import deque
 from transformers import pipeline
 from groq import Groq
 from llama_index.core import PromptTemplate
-from agent import agent  # Import the ReActAgent from the agent script
+from photon.agent import agent  # Import the ReActAgent from the agent script
 import edge_tts
 
 # Initialize Groq client
@@ -100,8 +99,9 @@ def process_audio_queue():
     while True:
         audio_file = audio_queue.get()
         try:
-            audio = AudioSegment.from_mp3(audio_file)
-            play(audio)
+            data, fs = sf.read(audio_file, dtype='float32')
+            sd.play(data, fs)
+            sd.wait()
         except Exception as e:
             print(f"Error playing sound: {e}")
         finally:

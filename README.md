@@ -1,88 +1,126 @@
 # PHOTON - A Personal Desktop Assistant
 
-PHOTON is an advanced personal desktop assistant inspired by JARVIS from Iron Man. Built using the Groq API and the Llama model, The assistant is equipped to handle complex command structures and can invoke agents and tools to execute specific tasks. It operates as a conversational AI with the capability to transcribe, summarize, and respond intelligently based on context.
+**PHOTON (Personal Hyper-Optimized Tactical Operations Network)** is an advanced, voice-controlled desktop assistant inspired by JARVIS from Iron Man. Built with Python and powered by the Groq API with the Llama 3 model, PHOTON is designed to be a seamless and intelligent partner for your daily tasks. It can understand complex commands, perform actions on your computer, and even learn from documents you provide.
 
-## Project Structure
+## Features
 
-This project consists of several key files, each playing a crucial role in the assistant's functionality.
-
-### 1. `photon.py`
-
-The core of the PHOTON assistant, `photon.py` handles the main functionality, including:
-- **Speech Recognition**: Converts voice input into text using a speech-to-text system.
-- **Model Response Generation**: Sends the transcribed text to the Groq model, which processes the query and generates a response.
-- **Text-to-Speech Conversion**: Converts the model's response back into speech for output.
-- **Agent Invocation**: Based on the system prompt format, `photon.py` can call `agent.py` to handle specific tasks. If the model responds in a format that indicates an agent is needed, the message is routed to the agent, which then invokes necessary tools to fulfill the request.
-  
-The system prompt in `photon.py` defines the assistant's personality, behavior, and response style, ensuring PHOTON operates with precision and efficiency.
-
-### 2. `agent.py`
-
-`agent.py` is responsible for initializing and managing the agent. Key functions include:
-- **Embedding Model Initialization**: Initializes an embedding model from HuggingFace for vector storage and retrieval.
-- **Groq Model Initialization**: Sets up the Groq model to support agent operations.
-- **Vector Storage**: Uses Llama Index's Simple Directory Reader to vectorize and store data for use in queries.
-- **Agent Initialization**: The agent is set up to handle specific tasks and has access to various tools (imported from `tools.py`), which it can invoke based on user commands.
-- **Storage Folder Creation**: When the agent processes and vectorizes data, it saves the index in a `storage/` folder for efficient retrieval in future interactions.
-
-### 3. `tools.py`
-
-`tools.py` houses various helper functions and tools required by the agent to perform specific actions. These tools are:
-- **Specific Functions**: Each tool is a standalone function written to handle particular tasks requested by the agent.
-- **Importable by Agent**: `tools.py` functions are imported into `agent.py`, making them accessible to the agent when specific operations are needed.
-  
-### 4. `transcriptions.py`
-
-`transcriptions.py` operates independently from the main agent system, focusing solely on transcription tasks. Its functionalities include:
-- **Speech-to-Text Conversion**: Similar to `photon.py`, this file uses a speech-to-text system to transcribe spoken input.
-- **LLM Integration for Refinement**: Transcribed text is sent through the language model (LLM) for refinement and rephrasing, ensuring clear and coherent output.
-- **Automated Typing**: Once refined, the output text is either displayed or typed out on the user’s computer.
-  
-### Additional Components
-
-- **`data/` Folder**: Contains data files and any resources needed for your local knowledge base. It can include PDF's, TXT files, JSON files and more.
-- **`storage/` Folder**: Automatically created by `agent.py` for storing vectorized data used in queries. This folder houses index files for efficient information retrieval.
-
-## Setup and Installation
-
-### Requirements
-
-The project requires the following dependencies, which are listed in `requirements.txt`:
-
-To install dependencies, run:
-
-```bash
-pip install -r requirements.txt
-```
-
-## Usage
-
-1. **Run the Assistant**: Start the assistant by running `photon.py`:
-   ```bash
-   python photon.py
-   ```
-
-2. **Voice Interaction**: Speak to PHOTON to initiate commands. It will transcribe your speech, process it through the model, and respond with audio output.
-3. **Agent Invocation**: If the assistant's response requires specific actions, it will automatically call `agent.py` to handle the request, using the tools from `tools.py` as needed.
-4. **Transcriptions Only**: For transcription-focused tasks, use `transcriptions.py` independently to transcribe, refine, and output text without engaging the full conversational model.
+*   **Voice-Controlled Interaction:** Speak to PHOTON in natural language to get things done.
+*   **Conversational AI:** Powered by the Llama 3 model via the Groq API for fast and intelligent responses.
+*   **Task Automation:** PHOTON can perform a variety of tasks, including:
+    *   Getting the current time and weather.
+    *   Playing YouTube videos.
+    *   Searching Wikipedia.
+    *   Sending WhatsApp messages.
+*   **Knowledge Base:** You can provide documents (PDFs, text files, etc.) to PHOTON, and it will learn from them to answer your questions.
+*   **Agentic Capabilities:** PHOTON can delegate complex tasks to a specialized "agent" that can use a variety of tools to get the job done.
+*   **Standalone Transcription Tool:** A separate tool is included to transcribe your speech into formatted text, either as an essay or a log entry.
 
 ## How It Works
 
-1. **Speech to Text**: User speech is transcribed into text, which is then fed to the Groq model for processing.
-2. **Model Processing**: The LLM in `photon.py` generates a response based on the prompt and context.
-3. **Agent and Tools**: If the model determines an agent is needed, `agent.py` is called, which can use tools in `tools.py` to perform specific tasks.
-4. **Text to Speech**: The assistant’s response is converted to speech and delivered to the user.
+PHOTON's workflow is a seamless integration of several key technologies:
 
-## Project Features
+1.  **Voice Input:** The assistant continuously listens for a hotword (holding the `space` key).
+2.  **Speech-to-Text:** Your voice is recorded and transcribed into text using the `openai/whisper-medium` model.
+3.  **Natural Language Understanding:** The transcribed text is sent to the Groq API, which uses the Llama 3 model to understand your intent.
+4.  **Task Execution:**
+    *   For simple conversational queries, PHOTON responds directly.
+    *   For more complex tasks, PHOTON's "agent" is invoked. The agent uses a ReAct (Reasoning and Acting) framework to select the appropriate tool (e.g., weather tool, YouTube tool) to fulfill your request.
+5.  **Text-to-Speech:** The assistant's response is converted back to a natural-sounding male voice using Microsoft Edge's TTS engine.
 
-- **Conversational AI**: Engages users in natural language, handling tasks and queries seamlessly.
-- **Contextual Transcription**: `transcriptions.py` provides transcription capabilities with context-aware rephrasing.
-- **Tool-Based Functionality**: Tools in `tools.py` offer modular, expandable functionality for diverse operations.
-- **Vectorized Query Storage**: Efficient data storage in `storage/` allows for quick retrieval in agent operations.
+## Project Structure
+
+The project is organized into the following key files and directories:
+
+```
+PHOTON---A-Personal-Desktop-Assistant/
+├── photon/
+│   ├── __init__.py
+│   ├── agent.py
+│   ├── photon.py
+│   ├── tools.py
+│   ├── transcriptions.py
+│   ├── data/
+│   └── message_history/
+├── Pipfile
+├── Pipfile.lock
+└── README.md
+```
+
+*   **`photon/`**: The main package for the project.
+    *   **`__init__.py`**: Makes the `photon` directory a Python package.
+    *   **`photon.py`**: The core script that runs the main assistant.
+    *   **`agent.py`**: The specialized agent that can use tools to perform tasks.
+    *   **`tools.py`**: Contains the individual tools that the agent can use.
+    *   **`transcriptions.py`**: The standalone transcription tool.
+    *   **`data/`**: A directory where you can place your documents for PHOTON to learn from.
+    *   **`message_history/`**: Stores the conversation history.
+*   **`Pipfile` and `Pipfile.lock`**: These files manage the project's Python dependencies using `pipenv`.
+*   **`README.md`**: This file.
+
+## Setup and Installation
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/your-username/PHOTON---A-Personal-Desktop-Assistant.git
+    cd PHOTON---A-Personal-Desktop-Assistant
+    ```
+
+2.  **Install `pipenv`:**
+    ```bash
+    pip install pipenv
+    ```
+
+3.  **Install dependencies:**
+    ```bash
+    pipenv install
+    ```
+
+4.  **Set up API Keys:**
+    *   This project requires API keys from Groq and OpenWeatherMap.
+    *   You will need to replace the placeholder `"YOUR_API_KEY"` in the following files with your actual API keys:
+        *   `photon/photon.py`
+        *   `photon/agent.py`
+        *   `photon/tools.py` (for OpenWeatherMap)
+
+5.  **Activate the virtual environment:**
+    ```bash
+    pipenv shell
+    ```
+
+## Usage
+
+1.  **Run the Assistant:**
+    ```bash
+    python photon/photon.py
+    ```
+
+2.  **Interact with PHOTON:**
+    *   Press and hold the `space` bar to speak your command.
+    *   To use the agent's tools, phrase your command like: "Photon, use your agent to..."
+
+3.  **Use the Transcription Tool:**
+    ```bash
+    python photon/transcriptions.py
+    ```
+    *   Press and hold the `Delete` key to transcribe your speech into an essay format.
+    *   Press and hold the `End` key to transcribe your speech into a log entry format.
+
+## Available Tools
+
+The agent has access to the following tools:
+
+*   **`get_time`**: Gets the current time for a specific location.
+*   **`weather_data`**: Fetches the current weather for a city.
+*   **`youtube_transcript`**: Gets the transcript of a YouTube video.
+*   **`send_whatsapp_message`**: Sends a WhatsApp message using the desktop application.
+*   **`play_youtube_video`**: Plays a YouTube video in your browser.
+*   **`wikipedia_search`**: Opens a Wikipedia search in your browser.
+*   **`real_estate_database`**: Answers questions about real estate data from the `data/` directory.
+*   **`retrieve_conversation_history`**: Summarizes your past conversation with PHOTON.
 
 ## Future Improvements
 
-Potential areas for further development include:
-- Expanding tool functions in `tools.py` for more complex tasks.
-- Enhancing agent capabilities in `agent.py` for smarter decision-making.
-- Adding more language support and refining transcription accuracy in `transcriptions.py`.
+*   **Add more tools:** The agent's capabilities can be expanded by adding more tools for different tasks.
+*   **Improve hotword detection:** Instead of holding a key, use a more sophisticated hotword detection engine.
+*   **GUI:** Create a graphical user interface for the assistant.
+*   **Secure API key management:** Use a more secure method for storing and accessing API keys, such as environment variables or a `.env` file.

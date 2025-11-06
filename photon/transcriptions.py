@@ -9,8 +9,7 @@ import asyncio
 from transformers import pipeline
 from groq import Groq
 import edge_tts
-from pydub import AudioSegment
-from pydub.playback import play
+import soundfile as sf
 
 
 # Initialize the Whisper model pipeline for ASR with timestamps enabled
@@ -52,8 +51,9 @@ async def speak_text(text):
     """Uses edge_tts to speak out the specified text."""
     communicate = edge_tts.Communicate(text, "en-CA-LiamNeural", pitch="-40Hz")
     await communicate.save("notification.mp3")
-    audio = AudioSegment.from_mp3("notification.mp3")
-    play(audio)
+    data, fs = sf.read("notification.mp3", dtype='float32')
+    sd.play(data, fs)
+    sd.wait()
 
 def record_audio_continuously(sample_rate):
     """

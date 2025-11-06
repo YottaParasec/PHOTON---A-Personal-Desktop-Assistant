@@ -1,0 +1,30 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+llama-index = "*"
+transformers = "*"
+groq = "*"
+pydantic = "*"
+numpy = "*"
+sounddevice = "*"
+wavio = "*"
+keyboard = "*"
+pydub = "*"
+requests = "*"
+datetime = "*"
+pytz = "*"
+fuzzywuzzy = "*"
+pywhatkit = "*"
+pyautogui = "*"
+edge-tts = "*"
+youtube-transcript-api = "*"
+pyaudio = "*"
+soundfile = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.13"
