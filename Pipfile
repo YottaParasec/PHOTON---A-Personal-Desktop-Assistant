@@ -4,7 +4,6 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-llama-index = "*"
 transformers = "*"
 groq = "*"
 pydantic = "*"
@@ -23,6 +22,10 @@ edge-tts = "*"
 youtube-transcript-api = "*"
 pyaudio = "*"
 soundfile = "*"
+llama-index-embeddings-huggingface = "*"
+llama-index-llms-groq = "*"
+llama-index-llms-ollama = "*"
+llama-index = "*"
 
 [dev-packages]
 

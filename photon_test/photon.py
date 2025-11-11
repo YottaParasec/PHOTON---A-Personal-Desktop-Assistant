@@ -11,31 +11,25 @@ import soundfile as sf
 from threading import Thread
 from queue import Queue
 from collections import deque
-from transformers import pipeline
 from groq import Groq
 from llama_index.core import PromptTemplate
 from agent import create_agent
 from tools import time_engine, weather_tool, yt_transcript_tool, send_whatsapp_message_tool, play_youtube_tool, open_wikipedia_search_tool
-
-# tools = [
-#     time_engine,
-#     weather_tool,
-#     yt_transcript_tool,
-#     send_whatsapp_message_tool,
-#     play_youtube_tool,
-#     open_wikipedia_search_tool,
-# ]
-# agent = create_agent(tools)
-#   # Import the ReActAgent from the agent script
 import edge_tts
-
-print("Python PATH:", os.environ['PATH'])
 
 # Initialize Groq client
 groq_client = Groq(api_key="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")
 
-# Whisper model pipeline for ASR with timestamps enabled
-pipe = pipeline("automatic-speech-recognition", model="openai/whisper-medium", device=0, return_timestamps=True)
+# Create the agent
+tools = [
+    time_engine,
+    weather_tool,
+    yt_transcript_tool,
+    send_whatsapp_message_tool,
+    play_youtube_tool,
+    open_wikipedia_search_tool,
+]
+agent = create_agent(tools)
 
 # Define the system prompt template
 template = (
@@ -160,8 +154,14 @@ while True:
 
     try:
         # Transcribe the audio file with Whisper
-        transcription_result = pipe(audio_file)
-        user_input = transcription_result["text"]
+        with open(audio_file, "rb") as file:
+            transcription = groq_client.audio.transcriptions.create(
+                file=(audio_file, file.read()),
+                model="whisper-large-v3-turbo",
+                temperature=0,
+                response_format="verbose_json",
+            )
+        user_input = transcription.text
         print("Transcription:", user_input)
 
         # Format prompt and add to conversation history
