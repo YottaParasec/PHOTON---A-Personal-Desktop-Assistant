@@ -10,14 +10,14 @@ from typing import List, Dict, Any
 from pydantic import BaseModel, Field
 from email.mime.text import MIMEText
 import smtplib
-from llama_index.core.tools import FunctionTool
-from llama_index.llms.ollama import Ollama  # Assuming you're using Ollama LLM for summarization
+from langchain_core.tools import tool
 from youtube_transcript_api import YouTubeTranscriptApi
 from groq import Groq
 import pywhatkit
 from fuzzywuzzy import fuzz, process
 
 
+@tool
 def open_wikipedia_search(query: str) -> str:
     """
     Opens Wikipedia in the default web browser and searches for the provided query.
@@ -29,14 +29,8 @@ def open_wikipedia_search(query: str) -> str:
     webbrowser.open(url)
     return f"Wikipedia page opened for query: '{query}'"
 
-# Wrap the function with FunctionTool
-open_wikipedia_search_tool = FunctionTool.from_defaults(
-    open_wikipedia_search,
-    name="wikipedia_search",
-    description="Open Wikipedia and search for a query"
-    )
 
-
+@tool
 def play_youtube_video(video_title: str) -> str:
     """
     Searches for a YouTube video by title and plays it in the browser.
@@ -52,19 +46,12 @@ def play_youtube_video(video_title: str) -> str:
     except Exception as e:
         return f"An error occurred: {str(e)}"
 
-# Wrap the function with FunctionTool for integration
-play_youtube_tool = FunctionTool.from_defaults(
-    play_youtube_video,
-    name="play_youtube_video",
-    description="This function takes the title of a YouTube video as input and plays the video in the browser. "
-                "The input should be a string describing the video's title or keywords."
-)
-
 # Dictionary of contacts with names as keys and phone numbers as values
 contacts = {
     #Add your contacts here
 }
 
+@tool
 def send_whatsapp_message(contact_name: str, message: str) -> str:
     """
     Sends a WhatsApp message to a specified contact using a desktop application. 
@@ -104,15 +91,8 @@ def send_whatsapp_message(contact_name: str, message: str) -> str:
     pyautogui.press('enter')
     return f"Message sent to {match}: {message}"
 
-# Creating the FunctionTool wrapper
-send_whatsapp_message_tool = FunctionTool.from_defaults(
-    send_whatsapp_message,
-    name="send_whatsapp_message",
-    description="Sends a WhatsApp message to a specified contact. "
-                "If the contact name is not found directly, it will use fuzzy matching to find the closest match."
-)
 
-
+@tool
 def get_video_transcript(video_id: str) -> str:
     """
     Fetches the transcript for a YouTube video by ID and writes it to a file.
@@ -140,13 +120,8 @@ def get_video_transcript(video_id: str) -> str:
     except Exception as e:
         return f"An error occurred: {e}"
 
-# Wrap the function with FunctionTool
-yt_transcript_tool = FunctionTool.from_defaults(
-    get_video_transcript,
-    name="youtube_transcript",
-    description="Fetches the transcript of a YouTube video by video ID and writes it to a file."
-)
 
+@tool
 def get_current_weather(city: str) -> dict:
     """
     Fetches current weather data for a given city from OpenWeather API.
@@ -181,9 +156,8 @@ def get_current_weather(city: str) -> dict:
     except requests.RequestException as e:
         return {"error": str(e)}
 
-# Wrap the weather function as a FunctionTool
-weather_tool = FunctionTool.from_defaults(get_current_weather, name="weather_data")
 
+@tool
 def get_current_time(location: str = "UTC") -> str:
     """
     Get the current time in a more human-readable format for a specific location.
@@ -200,7 +174,3 @@ def get_current_time(location: str = "UTC") -> str:
     current_date = now.strftime("%A, %B %d, %Y")  # Full weekday, month name, day, and year
 
     return f"Current Date and Time in {location} = {current_date}, {current_time}"
-
-
-# Create the time tool for the ReAct Agent
-time_engine = FunctionTool.from_defaults(get_current_time, name="get_time")

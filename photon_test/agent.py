@@ -1,9 +1,11 @@
 import os
-from llama_index.core import VectorStoreIndex, SimpleDirectoryReader, Settings
-from llama_index.embeddings.huggingface import HuggingFaceEmbedding
-from llama_index.llms.groq import Groq
-from llama_index.core.agent import ReActAgent
-from llama_index.core.tools import FunctionTool, QueryEngineTool
+from langchain_community.document_loaders import DirectoryLoader
+from langchain_community.vectorstores import FAISS
+from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_groq import ChatGroq
+from langchain.agents import AgentExecutor, create_tool_calling_agent
+from langchain.tools.retriever import create_retriever_tool
+from langchain_core.prompts import ChatPromptTemplate
 
 def create_agent(tools):
     """
@@ -14,32 +16,43 @@ def create_agent(tools):
         os.makedirs("data")
 
     # Initialize the HuggingFace embedding model
-    embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5")
+    embed_model = HuggingFaceEmbeddings(model_name="BAAI/bge-small-en-v1.5")
 
     # Initialize the Groq API LLM
-    llm = Groq(model="llama-3.3-70b-versatile", api_key="")
-    Settings.llm = llm
+    llm = ChatGroq(model="llama3-70b-8192", api_key="")
 
     # Load documents from the 'data' directory
-    documents = SimpleDirectoryReader("data").load_data()
+    loader = DirectoryLoader("data", glob="**/*.txt")
+    documents = loader.load()
 
     # Create a VectorStoreIndex from the documents
-    index = VectorStoreIndex.from_documents(documents, embed_model=embed_model)
+    vector_store = FAISS.from_documents(documents, embed_model)
+    retriever = vector_store.as_retriever()
 
-    # Create a query engine from the index
-    query_engine = index.as_query_engine()
-
-    # Create a query engine tool
-    query_engine_tool = QueryEngineTool.from_defaults(
-        query_engine,
-        name="rag_tool",
-        description="This tool can answer questions about the documents in the data directory.",
+    # Create a retriever tool
+    retriever_tool = create_retriever_tool(
+        retriever,
+        "rag_tool",
+        "This tool can answer questions about the documents in the data directory.",
     )
 
-    # Add the query engine tool to the list of tools
-    all_tools = tools + [query_engine_tool]
+    # Add the retriever tool to the list of tools
+    all_tools = tools + [retriever_tool]
 
-    # Initialize the ReActAgent with the tools
-    agent = ReActAgent.from_tools(all_tools, llm=llm, max_iterations=20, verbose=True, memory=None, context="You MUST respond in the lowest iterations possible. If you can't find the answer in the tool, you must say so. DO NOT use unnecessary tools.")
-    agent.reset()
-    return agent
+    # Create the prompt
+    prompt = ChatPromptTemplate.from_messages(
+        [
+            ("system", "You are a helpful assistant. You may not need to use tools for every query. Respond directly if the query does not require a tool."),
+            ("placeholder", "{chat_history}"),
+            ("human", "{input}"),
+            ("placeholder", "{agent_scratchpad}"),
+        ]
+    )
+
+    # Create the agent
+    agent = create_tool_calling_agent(llm, all_tools, prompt)
+
+    # Create an agent executor
+    agent_executor = AgentExecutor(agent=agent, tools=all_tools, verbose=True)
+
+    return agent_executor

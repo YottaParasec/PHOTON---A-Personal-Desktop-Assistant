@@ -12,24 +12,24 @@ from threading import Thread
 from queue import Queue
 from collections import deque
 from groq import Groq
-from llama_index.core import PromptTemplate
-from agent import create_agent
-from tools import time_engine, weather_tool, yt_transcript_tool, send_whatsapp_message_tool, play_youtube_tool, open_wikipedia_search_tool
+from langchain.prompts import PromptTemplate
+from photon_test.agent import create_agent
+from photon_test.tools import open_wikipedia_search, play_youtube_video, send_whatsapp_message, get_video_transcript, get_current_weather, get_current_time
 import edge_tts
 
 # Initialize Groq client
-groq_client = Groq(api_key="")
+groq_client = Groq(api_key="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")
 
 # Create the agent
 tools = [
-    time_engine,
-    weather_tool,
-    yt_transcript_tool,
-    send_whatsapp_message_tool,
-    play_youtube_tool,
-    open_wikipedia_search_tool,
+    open_wikipedia_search,
+    play_youtube_video,
+    send_whatsapp_message,
+    get_video_transcript,
+    get_current_weather,
+    get_current_time,
 ]
-agent = create_agent(tools)
+agent_executor = create_agent(tools)
 
 # Define the system prompt template
 template = (
@@ -69,7 +69,7 @@ template = (
     "If no such request is made, respond conversationally on your own."
 )
 
-system_prompt = PromptTemplate(template)
+system_prompt = PromptTemplate.from_template(template)
 
 # Conversation history and TTS audio queue
 conversation_history = deque(maxlen=6)
@@ -124,7 +124,7 @@ def start_audio_queue_processor():
 start_audio_queue_processor()
 
 def groq_prompt(conversation_history):
-    chat_completion = groq_client.chat.completions.create(messages=conversation_history, model='llama-3.3-70b-versatile')
+    chat_completion = groq_client.chat.completions.create(messages=list(conversation_history), model='llama3-70b-8192')
     response = chat_completion.choices[0].message
     return response.content
 
@@ -136,7 +136,7 @@ def record_audio_continuously(sample_rate):
     audio_data = []
 
     while keyboard.is_pressed('space'):
-        chunk = sd.rec(int(chunk_duration * sample_rate), samplerate=sample_rate, channels=1, dtype="float32")
+        chunk = sd.rec(int(chunk_duration * sample_rate), samplerate=.sample_rate, channels=1, dtype="float32")
         sd.wait()
         audio_data.append(chunk)
 
@@ -179,8 +179,8 @@ while True:
             print(f"Executing command via agent: {agent_command}")
 
             # Use agent and provide response to the model
-            agent_response = agent.chat(agent_command)
-            formatted_agent_response = f"Agent - {agent_response}"
+            agent_response = agent_executor.invoke({"input": agent_command})
+            formatted_agent_response = f"Agent - {agent_response['output']}"
             conversation_history.append({'role': 'user', 'content': formatted_agent_response})
             ai_response = groq_prompt(conversation_history)
             print('AI:', ai_response)

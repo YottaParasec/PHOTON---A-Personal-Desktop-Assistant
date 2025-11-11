@@ -21,11 +21,16 @@ pyautogui = "*"
 edge-tts = "*"
 youtube-transcript-api = "*"
 pyaudio = "*"
-soundfile = "*"
 llama-index-embeddings-huggingface = "*"
 llama-index-llms-groq = "*"
 llama-index-llms-ollama = "*"
 llama-index = "*"
+soundfile = "*"
+langchain-core = "*"
+langchain = "*"
+langchain-community = "*"
+langchain-groq = "*"
+faiss-cpu = "*"
 
 [dev-packages]
 

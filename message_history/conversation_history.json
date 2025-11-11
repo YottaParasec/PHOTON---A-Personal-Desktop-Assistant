@@ -16,3 +16,7 @@
 {"role": "assistant", "content": "Yes, I have the capability to interface with an agent when needed. If you require information or task execution that necessitates the use of an agent, please let me know, and I'll be happy to facilitate the interaction."}
 {"role": "user", "content": " Use an agent to tell me what the weather is."}
 {"role": "assistant", "content": "Agent - Provide the current weather conditions, including temperature, humidity, and any forecasts for the next 24 hours."}
+{"role": "user", "content": " Hello."}
+{"role": "assistant", "content": "Hello. It's a pleasure to be at your service. Is there something I can assist you with today, or would you like to initiate a conversation?"}
+{"role": "user", "content": " ."}
+{"role": "assistant", "content": "It seems you haven't provided any specific request or topic for discussion. If you're ready, please feel free to share what's on your mind, and I'll do my best to provide assistance or engage in a conversation."}
