@@ -17,7 +17,7 @@ def create_agent(tools):
     embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5")
 
     # Initialize the Groq API LLM
-    llm = Groq(model="llama-3.3-70b-versatile", api_key="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")
+    llm = Groq(model="llama-3.3-70b-versatile", api_key="")
     Settings.llm = llm
 
     # Load documents from the 'data' directory

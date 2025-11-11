@@ -18,7 +18,7 @@ from tools import time_engine, weather_tool, yt_transcript_tool, send_whatsapp_m
 import edge_tts
 
 # Initialize Groq client
-groq_client = Groq(api_key="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")
+groq_client = Groq(api_key="")
 
 # Create the agent
 tools = [
