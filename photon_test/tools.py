@@ -1,3 +1,4 @@
+from rag_tool import document_qa_tool
 import webbrowser
 import requests
 import glob
@@ -14,14 +15,6 @@ from langchain_core.tools import tool
 from googlesearch import search
 import unittest
 from unittest.mock import patch, MagicMock
-
-from langchain_core.runnables import RunnablePassthrough
-from langchain_core.output_parsers import StrOutputParser
-from langchain_core.prompts import PromptTemplate
-from langchain_community.vectorstores import FAISS
-from langchain_community.embeddings import HuggingFaceEmbeddings
-from langchain_community.document_loaders import DirectoryLoader, TextLoader
-from langchain_groq import ChatGroq
 
 # Tool definitions
 
@@ -123,29 +116,40 @@ def get_current_datetime(location: str = "UTC") -> str:
 
     return f"Current Date and Time in {location} = {current_date}, {current_time}"
 
+import pyautogui
+import time
+import pyperclip
+
+import pyautogui
+import time
+
 @tool
 def write_to_notepad(content: str) -> str:
     """
-    Opens Notepad and writes the given content to it.
-
+    Opens Notepad and types the given content slowly.
+    Each character is typed with a controlled delay for reliability.
     :param content: The text content to be written to Notepad.
-    :return: A confirmation message indicating that the content has been written to Notepad.
+    :return: Confirmation message.
     """
     try:
         pyautogui.hotkey('win', 'r')
         time.sleep(1)
-        pyautogui.write('notepad')
+        pyautogui.write('notepad', interval=0.15)  # slower typing for command
         pyautogui.press('enter')
-        time.sleep(2)
-        pyautogui.write(content)
-        return "Content has been written to Notepad."
+        time.sleep(2.5)
+        # Slowly type each character, line by line
+        for line in content.splitlines():
+            pyautogui.write(line, interval=0.10)  # interval controls speed
+            pyautogui.press('enter')
+        return "Content has been slowly typed into Notepad."
     except Exception as e:
         return f"An error occurred: {e}"
+
 
 @tool
 def document_qa_tool(query: str) -> str:
     """
-    Answers questions about the documents in the data directory.
+    Answers questions about the documents in the data directory, including PDF files.
     """
     # Initialize the HuggingFace embedding model
     embed_model = HuggingFaceEmbeddings(model_name="BAAI/bge-small-en-v1.5")
@@ -153,16 +157,30 @@ def document_qa_tool(query: str) -> str:
     # Initialize the Groq API LLM
     llm = ChatGroq(model="llama-3.1-8b-instant", api_key="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")
 
-    # Load documents from the specified directory
-    loader = DirectoryLoader(
+    # Load text documents
+    text_loader = DirectoryLoader(
         "data",
-        glob="**/*.txt",  # Load only .txt files
+        glob="**/*.txt",
         loader_cls=TextLoader,
         use_multithreading=True,
         show_progress=True,
         silent_errors=True,
     )
-    documents = loader.load()
+    text_documents = text_loader.load()
+
+    # Load PDF documents
+    pdf_loader = DirectoryLoader(
+        "data",
+        glob="**/*.pdf",
+        loader_cls=PyPDFLoader,
+        use_multithreading=True,
+        show_progress=True,
+        silent_errors=True,
+    )
+    pdf_documents = pdf_loader.load()
+
+    # Combine all documents
+    documents = text_documents + pdf_documents
 
     # Create a VectorStoreIndex from the documents
     vector_store = FAISS.from_documents(documents, embed_model)
