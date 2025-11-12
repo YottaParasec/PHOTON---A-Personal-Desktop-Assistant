@@ -1,5 +1,0 @@
-This file contains information about real estate properties in Bangalore.
-Property 1: 3 BHK apartment in Koramangala, 1500 sqft, 1.5 Cr.
-Property 2: 2 BHK flat in Indiranagar, 1200 sqft, 1.2 Cr.
-Property 3: Villa in Whitefield, 2400 sqft, 3.0 Cr.
-Contact agent John Doe for more details.

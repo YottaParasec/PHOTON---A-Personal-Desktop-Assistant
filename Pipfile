@@ -4,7 +4,6 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-transformers = "*"
 groq = "*"
 pydantic = "*"
 numpy = "*"
@@ -32,6 +31,10 @@ langchain-groq = "*"
 faiss-cpu = "*"
 langchain = "*"
 langchain-classic = "*"
+transformers = "*"
+wikipedia = "*"
+googlesearch-python = "*"
+pypdf = "*"
 
 [dev-packages]
 

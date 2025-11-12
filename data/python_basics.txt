@@ -1,0 +1,32 @@
+Python Basics
+
+Variables and Data Types:
+In Python, you don't need to declare the type of a variable. You can assign a value to a variable and the interpreter will infer the data type.
+- `x = 5` (integer)
+- `y = 3.14` (float)
+- `name = "John"` (string)
+- `is_student = True` (boolean)
+
+Lists:
+A list is a collection of items that are ordered and mutable.
+- `my_list = [1, 2, 3, "apple", "banana"]`
+- Access elements by index: `my_list[0]` (returns 1)
+- Add elements: `my_list.append("orange")`
+- Remove elements: `my_list.remove("apple")`
+
+Dictionaries:
+A dictionary is a collection of key-value pairs that are unordered and mutable.
+- `my_dict = {"name": "John", "age": 30, "city": "New York"}`
+- Access values by key: `my_dict["name"]` (returns "John")
+- Add or update items: `my_dict["email"] = "john@example.com"`
+- Remove items: `del my_dict["city"]`
+
+Functions:
+Functions are defined using the `def` keyword.
+- `def greet(name):`
+- `    print(f"Hello, {name}!")`
+- Call a function: `greet("Alice")`
+
+Loops:
+- `for` loop: `for item in my_list: print(item)`
+- `while` loop: `i = 0; while i < 5: print(i); i += 1`
