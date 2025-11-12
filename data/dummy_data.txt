@@ -1,1 +1,1 @@
-This is a dummy file for the real estate data.
+Bangalore has 200 properties

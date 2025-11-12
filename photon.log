@@ -1,0 +1,474 @@
+2025-11-11 19:17:23,018 - PHOTON - INFO - Groq client initialized successfully
+2025-11-11 19:17:23,029 - PHOTON - INFO - Starting PHOTON...
+2025-11-11 19:17:23,029 - PHOTON - INFO - Initializing agent...
+2025-11-11 19:17:23,030 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-11-11 19:17:26,237 - PHOTON - INFO - Embeddings model loaded
+2025-11-11 19:17:26,238 - PHOTON - ERROR - Agent creation failed: The api_key client option must be set either by passing api_key to the client or by setting the GROQ_API_KEY environment variable
+2025-11-11 19:17:26,238 - PHOTON - INFO - Shutting down PHOTON...
+2025-11-11 19:17:26,238 - PHOTON - INFO - PHOTON stopped
+2025-11-11 19:18:17,834 - PHOTON - ERROR - Failed to initialize Groq client: name 'GROQ_API_KEY' is not defined
+2025-11-11 19:18:47,089 - PHOTON - INFO - Groq client initialized successfully
+2025-11-11 19:18:47,099 - PHOTON - INFO - Starting PHOTON...
+2025-11-11 19:18:47,099 - PHOTON - INFO - Initializing agent...
+2025-11-11 19:18:47,100 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-11-11 19:18:50,490 - PHOTON - INFO - Embeddings model loaded
+2025-11-11 19:18:50,491 - PHOTON - ERROR - Agent creation failed: The api_key client option must be set either by passing api_key to the client or by setting the GROQ_API_KEY environment variable
+2025-11-11 19:18:50,491 - PHOTON - INFO - Shutting down PHOTON...
+2025-11-11 19:18:50,491 - PHOTON - INFO - PHOTON stopped
+2025-11-11 19:19:34,313 - PHOTON - INFO - Groq client initialized successfully
+2025-11-11 19:19:34,324 - PHOTON - INFO - Starting PHOTON...
+2025-11-11 19:19:34,325 - PHOTON - INFO - Initializing agent...
+2025-11-11 19:19:34,326 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-11-11 19:19:37,544 - PHOTON - INFO - Embeddings model loaded
+2025-11-11 19:19:37,544 - PHOTON - ERROR - Agent creation failed: The api_key client option must be set either by passing api_key to the client or by setting the GROQ_API_KEY environment variable
+2025-11-11 19:19:37,544 - PHOTON - INFO - Shutting down PHOTON...
+2025-11-11 19:19:37,545 - PHOTON - INFO - PHOTON stopped
+2025-11-11 19:21:18,234 - PHOTON - INFO - Groq client initialized successfully
+2025-11-11 19:21:18,245 - PHOTON - INFO - Starting PHOTON...
+2025-11-11 19:21:18,245 - PHOTON - INFO - Initializing agent...
+2025-11-11 19:21:18,246 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-11-11 19:21:21,853 - PHOTON - INFO - Embeddings model loaded
+2025-11-11 19:21:22,623 - PHOTON - INFO - LLM initialized
+2025-11-11 19:21:22,624 - PHOTON - INFO - Loaded 1 documents
+2025-11-11 19:21:22,674 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-11-11 19:21:22,693 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-11-11 19:21:22,716 - PHOTON - INFO - Agent created successfully
+2025-11-11 19:21:22,717 - PHOTON - INFO - Audio processor started
+2025-11-11 19:21:37,243 - PHOTON - INFO - Recording started
+2025-11-11 19:21:38,370 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:21:38,646 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:21:38,647 - PHOTON - INFO - Transcription successful: Hello....
+2025-11-11 19:21:38,941 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:21:51,363 - PHOTON - INFO - Recording started
+2025-11-11 19:21:53,593 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:21:53,805 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:21:53,806 - PHOTON - INFO - Transcription successful: Who are you?...
+2025-11-11 19:21:54,037 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:22:03,643 - PHOTON - INFO - Recording started
+2025-11-11 19:22:07,171 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:22:07,381 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:22:07,382 - PHOTON - INFO - Transcription successful: What all can you do?...
+2025-11-11 19:22:07,632 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:22:08,379 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:22:48,338 - PHOTON - INFO - Recording started
+2025-11-11 19:22:50,570 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:22:50,786 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:22:50,786 - PHOTON - INFO - Transcription successful: what is the time now in india...
+2025-11-11 19:22:51,028 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:22:51,269 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:22:51,278 - PHOTON - INFO - Time fetched for: Asia/Kolkata
+2025-11-11 19:22:51,516 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:22:59,810 - PHOTON - INFO - Recording started
+2025-11-11 19:23:07,608 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:23:07,872 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:23:07,882 - PHOTON - INFO - Transcription successful: Search up, well open the Wikipedia page for Taj Ma...
+2025-11-11 19:23:08,146 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:23:08,202 - PHOTON - INFO - Opened Wikipedia for: Taj Mahal
+2025-11-11 19:23:08,555 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:23:19,202 - PHOTON - INFO - Recording started
+2025-11-11 19:23:29,230 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:23:29,585 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:23:29,586 - PHOTON - INFO - Transcription successful: Can you play a Vsauce video? Maybe something... Yo...
+2025-11-11 19:23:30,173 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:23:30,173 - PHOTON - ERROR - Agent execution error: Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.
+2025-11-11 19:23:42,538 - PHOTON - INFO - Recording started
+2025-11-11 19:23:44,769 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:23:45,006 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:23:45,006 - PHOTON - INFO - Transcription successful: Play a YouTube video...
+2025-11-11 19:23:46,000 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:23:47,184 - PHOTON - INFO - Playing YouTube video: Taj Mahal documentary
+2025-11-11 19:23:47,457 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:24:15,185 - PHOTON - INFO - Recording started
+2025-11-11 19:24:33,008 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:24:33,310 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:24:33,311 - PHOTON - INFO - Transcription successful: You are aware of Vsauce, right? I need you to play...
+2025-11-11 19:24:33,377 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-11 19:24:33,378 - PHOTON - ERROR - Agent execution error: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01j7t2kh2wf1sanbfr70kz3m1t` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98444, Requested 1718. Please try again in 2m19.968s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2025-11-11 19:25:37,760 - PHOTON - INFO - Recording started
+2025-11-11 19:25:38,880 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:25:39,080 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:25:39,080 - PHOTON - INFO - Transcription successful: Hello....
+2025-11-11 19:25:39,143 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-11 19:25:39,143 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 44.000000 seconds
+2025-11-11 19:26:17,286 - PHOTON - INFO - Groq client initialized successfully
+2025-11-11 19:26:17,296 - PHOTON - INFO - Starting PHOTON...
+2025-11-11 19:26:17,296 - PHOTON - INFO - Initializing agent...
+2025-11-11 19:26:17,297 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-11-11 19:26:20,492 - PHOTON - INFO - Embeddings model loaded
+2025-11-11 19:26:21,104 - PHOTON - INFO - LLM initialized
+2025-11-11 19:26:21,105 - PHOTON - INFO - Loaded 1 documents
+2025-11-11 19:26:21,153 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-11-11 19:26:21,169 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-11-11 19:26:21,187 - PHOTON - INFO - Agent created successfully
+2025-11-11 19:26:21,188 - PHOTON - INFO - Audio processor started
+2025-11-11 19:26:35,112 - PHOTON - INFO - Recording started
+2025-11-11 19:26:46,274 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:26:46,619 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:26:46,620 - PHOTON - INFO - Transcription successful: I need you to play a video by a Vsauce on YouTube....
+2025-11-11 19:26:46,839 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:26:47,900 - PHOTON - INFO - Playing YouTube video: Isolation (Mind Field)
+2025-11-11 19:26:48,143 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:26:48,161 - PHOTON - ERROR - Agent execution error: Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.
+2025-11-11 19:27:22,359 - PHOTON - INFO - Recording started
+2025-11-11 19:27:26,820 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:27:27,060 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:27:27,060 - PHOTON - INFO - Transcription successful: Could you also tell me about the real estate marke...
+2025-11-11 19:27:27,249 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:27:39,535 - PHOTON - INFO - Recording started
+2025-11-11 19:27:40,653 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:27:40,845 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:27:40,846 - PHOTON - INFO - Transcription successful: Try again....
+2025-11-11 19:27:41,034 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:28:02,087 - PHOTON - INFO - Recording started
+2025-11-11 19:28:03,208 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:28:03,410 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:28:03,411 - PHOTON - INFO - Transcription successful: ....
+2025-11-11 19:28:03,611 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:28:06,406 - PHOTON - INFO - Recording started
+2025-11-11 19:28:07,719 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:28:07,888 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:28:07,888 - PHOTON - INFO - Transcription successful: Thank you....
+2025-11-11 19:28:08,073 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:28:10,462 - PHOTON - INFO - Recording started
+2025-11-11 19:28:11,758 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:28:11,923 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:28:11,924 - PHOTON - INFO - Transcription successful: Thank you....
+2025-11-11 19:28:12,119 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:33:54,600 - PHOTON - INFO - Groq client initialized successfully
+2025-11-11 19:33:54,611 - PHOTON - INFO - Starting PHOTON...
+2025-11-11 19:33:54,611 - PHOTON - INFO - Initializing agent...
+2025-11-11 19:33:54,612 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-11-11 19:33:58,507 - PHOTON - INFO - Embeddings model loaded
+2025-11-11 19:33:59,134 - PHOTON - INFO - LLM initialized
+2025-11-11 19:33:59,135 - PHOTON - INFO - Loaded 1 documents
+2025-11-11 19:33:59,181 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-11-11 19:33:59,197 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-11-11 19:33:59,214 - PHOTON - INFO - Agent created successfully
+2025-11-11 19:33:59,215 - PHOTON - INFO - Audio processor started
+2025-11-11 19:34:14,386 - PHOTON - INFO - Recording started
+2025-11-11 19:34:17,736 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:34:18,019 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:34:18,021 - PHOTON - INFO - Transcription successful: Can you access your knowledge base?...
+2025-11-11 19:34:18,251 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:34:38,066 - PHOTON - INFO - Recording started
+2025-11-11 19:34:40,302 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:34:40,557 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:34:40,558 - PHOTON - INFO - Transcription successful: Real estate information...
+2025-11-11 19:34:40,772 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:34:40,964 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:34:41,167 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:34:41,366 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:34:41,574 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:36:05,980 - PHOTON - INFO - Groq client initialized successfully
+2025-11-11 19:36:05,991 - PHOTON - INFO - Starting PHOTON...
+2025-11-11 19:36:05,991 - PHOTON - INFO - Initializing agent...
+2025-11-11 19:36:05,992 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-11-11 19:36:09,486 - PHOTON - INFO - Embeddings model loaded
+2025-11-11 19:36:10,115 - PHOTON - INFO - LLM initialized
+2025-11-11 19:36:10,116 - PHOTON - INFO - Loaded 1 documents
+2025-11-11 19:36:10,165 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-11-11 19:36:10,184 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-11-11 19:36:10,202 - PHOTON - INFO - Agent created successfully
+2025-11-11 19:36:10,203 - PHOTON - INFO - Audio processor started
+2025-11-11 19:36:17,872 - PHOTON - INFO - Recording started
+2025-11-11 19:36:20,296 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:36:20,559 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:36:20,560 - PHOTON - INFO - Transcription successful: Real estate data...
+2025-11-11 19:36:20,769 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:36:20,969 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:36:28,368 - PHOTON - INFO - Recording started
+2025-11-11 19:36:30,601 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:36:30,814 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:36:30,815 - PHOTON - INFO - Transcription successful: Did you find any info?...
+2025-11-11 19:36:31,065 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:36:31,271 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:36:45,848 - PHOTON - INFO - Recording started
+2025-11-11 19:36:46,970 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:36:47,169 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:36:47,170 - PHOTON - INFO - Transcription successful: ....
+2025-11-11 19:36:47,366 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:36:55,000 - PHOTON - INFO - Recording started
+2025-11-11 19:36:56,117 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:36:56,335 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:36:56,336 - PHOTON - INFO - Transcription successful: Real estate info....
+2025-11-11 19:36:56,565 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:36:56,742 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:37:19,720 - PHOTON - INFO - Groq client initialized successfully
+2025-11-11 19:37:19,730 - PHOTON - INFO - Starting PHOTON...
+2025-11-11 19:37:19,730 - PHOTON - INFO - Initializing agent...
+2025-11-11 19:37:19,731 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-11-11 19:37:23,414 - PHOTON - INFO - Embeddings model loaded
+2025-11-11 19:37:24,026 - PHOTON - INFO - LLM initialized
+2025-11-11 19:37:24,035 - PHOTON - INFO - Loaded 1 documents
+2025-11-11 19:37:24,138 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-11-11 19:37:24,155 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-11-11 19:37:24,172 - PHOTON - INFO - Agent created successfully
+2025-11-11 19:37:24,172 - PHOTON - INFO - Audio processor started
+2025-11-11 19:37:26,704 - PHOTON - INFO - Recording started
+2025-11-11 19:37:29,128 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:37:29,411 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:37:29,411 - PHOTON - INFO - Transcription successful: Realistic information please....
+2025-11-11 19:37:29,609 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:37:35,151 - PHOTON - INFO - Recording started
+2025-11-11 19:37:38,676 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:37:39,001 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:37:39,002 - PHOTON - INFO - Transcription successful: give me real estate info...
+2025-11-11 19:37:39,249 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:37:39,614 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:38:27,391 - PHOTON - INFO - Recording started
+2025-11-11 19:38:29,618 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:38:29,846 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:38:29,847 - PHOTON - INFO - Transcription successful: How many properties does Bangalore have?...
+2025-11-11 19:38:30,065 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:38:30,065 - PHOTON - ERROR - Agent execution error: Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.
+2025-11-11 19:38:32,847 - PHOTON - INFO - Recording started
+2025-11-11 19:38:36,368 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:38:36,901 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:38:36,901 - PHOTON - INFO - Transcription successful: How many properties does Bangor have?...
+2025-11-11 19:38:37,103 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:38:47,535 - PHOTON - INFO - Recording started
+2025-11-11 19:38:51,992 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:38:52,235 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:38:52,235 - PHOTON - INFO - Transcription successful: How many properties does Bangalore have real estat...
+2025-11-11 19:38:52,444 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:38:52,445 - PHOTON - ERROR - Agent execution error: Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.
+2025-11-11 19:38:56,278 - PHOTON - INFO - Recording started
+2025-11-11 19:39:02,043 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:39:02,309 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:39:02,315 - PHOTON - INFO - Transcription successful: Real estate information gives me the amount of pro...
+2025-11-11 19:39:02,535 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:39:02,535 - PHOTON - ERROR - Agent execution error: Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.
+2025-11-11 19:39:15,766 - PHOTON - INFO - Recording started
+2025-11-11 19:39:19,114 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:39:19,382 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:39:19,383 - PHOTON - INFO - Transcription successful: Bangalore properties number realistic information...
+2025-11-11 19:39:19,613 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:39:19,614 - PHOTON - ERROR - Agent execution error: Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.
+2025-11-11 19:39:22,574 - PHOTON - INFO - Recording started
+2025-11-11 19:39:23,884 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:39:24,067 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:39:24,068 - PHOTON - INFO - Transcription successful: Hello?...
+2025-11-11 19:39:24,279 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:39:33,366 - PHOTON - INFO - Recording started
+2025-11-11 19:39:39,133 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:39:39,356 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:39:39,356 - PHOTON - INFO - Transcription successful: Real estate information, the number properties in ...
+2025-11-11 19:39:39,577 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:39:39,578 - PHOTON - ERROR - Agent execution error: Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.
+2025-11-11 19:44:01,443 - PHOTON - INFO - Groq client initialized successfully
+2025-11-11 19:44:01,456 - PHOTON - INFO - Starting PHOTON...
+2025-11-11 19:44:01,456 - PHOTON - INFO - Initializing agent...
+2025-11-11 19:44:01,457 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-11-11 19:44:04,879 - PHOTON - INFO - Embeddings model loaded
+2025-11-11 19:44:05,493 - PHOTON - INFO - LLM initialized
+2025-11-11 19:44:05,494 - PHOTON - INFO - Loaded 1 documents
+2025-11-11 19:44:05,535 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-11-11 19:44:05,551 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-11-11 19:44:05,569 - PHOTON - INFO - Agent created successfully
+2025-11-11 19:44:05,570 - PHOTON - INFO - Audio processor started
+2025-11-11 19:44:08,451 - PHOTON - INFO - Recording started
+2025-11-11 19:44:09,765 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:44:10,031 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:44:10,032 - PHOTON - INFO - Transcription successful: Hello....
+2025-11-11 19:44:10,227 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:44:36,146 - PHOTON - INFO - Recording started
+2025-11-11 19:44:41,727 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:44:41,952 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:44:41,953 - PHOTON - INFO - Transcription successful: real estate information...
+2025-11-11 19:44:42,180 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:44:42,399 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:44:50,442 - PHOTON - INFO - Recording started
+2025-11-11 19:44:52,672 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:44:52,876 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:44:52,877 - PHOTON - INFO - Transcription successful: What info did you get?...
+2025-11-11 19:44:53,080 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:45:03,802 - PHOTON - INFO - Recording started
+2025-11-11 19:45:09,379 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:45:09,604 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:45:09,605 - PHOTON - INFO - Transcription successful: How many properties are there in Bangalore real es...
+2025-11-11 19:45:09,829 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:45:10,025 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:46:02,594 - PHOTON - INFO - Recording started
+2025-11-11 19:46:04,826 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:46:05,049 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:46:05,050 - PHOTON - INFO - Transcription successful: ....
+2025-11-11 19:46:05,276 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:46:20,455 - PHOTON - INFO - Groq client initialized successfully
+2025-11-11 19:46:20,466 - PHOTON - INFO - Starting PHOTON...
+2025-11-11 19:46:20,467 - PHOTON - INFO - Initializing agent...
+2025-11-11 19:46:20,467 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-11-11 19:46:24,736 - PHOTON - INFO - Embeddings model loaded
+2025-11-11 19:46:25,352 - PHOTON - INFO - LLM initialized
+2025-11-11 19:46:25,353 - PHOTON - INFO - Loaded 2 documents
+2025-11-11 19:46:25,417 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-11-11 19:46:25,435 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-11-11 19:46:25,454 - PHOTON - INFO - Agent created successfully
+2025-11-11 19:46:25,454 - PHOTON - INFO - Audio processor started
+2025-11-11 19:46:27,769 - PHOTON - INFO - Recording started
+2025-11-11 19:46:30,192 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:46:30,453 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:46:30,454 - PHOTON - INFO - Transcription successful: What tools do you have access to?...
+2025-11-11 19:46:30,651 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:46:50,993 - PHOTON - INFO - Recording started
+2025-11-11 19:46:53,424 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:46:53,644 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:46:53,645 - PHOTON - INFO - Transcription successful: what is the current time...
+2025-11-11 19:46:53,907 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:46:53,950 - PHOTON - INFO - Time fetched for: UTC
+2025-11-11 19:46:54,176 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:46:57,537 - PHOTON - INFO - Recording started
+2025-11-11 19:46:59,952 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:47:00,160 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:47:00,161 - PHOTON - INFO - Transcription successful: Cool, what is it in India?...
+2025-11-11 19:47:00,407 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:47:00,408 - PHOTON - ERROR - Agent execution error: Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.
+2025-11-11 19:47:08,049 - PHOTON - INFO - Recording started
+2025-11-11 19:47:10,280 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:47:10,506 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:47:10,507 - PHOTON - INFO - Transcription successful: what is the time in India...
+2025-11-11 19:47:10,737 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:47:10,784 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-11 19:47:10,785 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 5.000000 seconds
+2025-11-11 19:47:16,008 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:47:16,012 - PHOTON - INFO - Time fetched for: Asia/Kolkata
+2025-11-11 19:47:31,784 - PHOTON - INFO - Recording started
+2025-11-11 19:47:32,903 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:47:33,141 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:47:33,142 - PHOTON - INFO - Transcription successful: What is the time in India?...
+2025-11-11 19:47:33,410 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:47:33,410 - PHOTON - ERROR - Agent execution error: Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.
+2025-11-11 19:47:39,528 - PHOTON - INFO - Recording started
+2025-11-11 19:47:42,873 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:47:43,100 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:47:43,100 - PHOTON - INFO - Transcription successful: What is the time in India?...
+2025-11-11 19:47:43,164 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-11 19:47:43,164 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 6.000000 seconds
+2025-11-11 19:47:49,394 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:47:49,395 - PHOTON - ERROR - Agent execution error: Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.
+2025-11-11 19:47:55,624 - PHOTON - INFO - Recording started
+2025-11-11 19:47:56,741 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:47:56,961 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:47:56,962 - PHOTON - INFO - Transcription successful: Hello....
+2025-11-11 19:47:57,028 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-11 19:47:57,029 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 9.000000 seconds
+2025-11-11 19:48:06,236 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:48:21,872 - PHOTON - INFO - Recording started
+2025-11-11 19:48:24,299 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:48:24,613 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:48:24,614 - PHOTON - INFO - Transcription successful: what is the time in India...
+2025-11-11 19:48:24,850 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:48:24,898 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-11 19:48:24,898 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 16.000000 seconds
+2025-11-11 19:48:41,110 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:48:41,168 - PHOTON - INFO - Time fetched for: Asia/Kolkata
+2025-11-11 19:48:50,263 - PHOTON - INFO - Recording started
+2025-11-11 19:48:52,495 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:48:52,734 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:48:52,839 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-11 19:48:52,840 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 6.000000 seconds
+2025-11-11 19:48:59,116 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:48:59,195 - PHOTON - INFO - Time fetched for: Asia/Kolkata
+2025-11-11 19:48:59,251 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-11 19:48:59,251 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 19.000000 seconds
+2025-11-11 19:49:26,033 - PHOTON - INFO - Groq client initialized successfully
+2025-11-11 19:49:26,045 - PHOTON - INFO - Starting PHOTON...
+2025-11-11 19:49:26,045 - PHOTON - INFO - Initializing agent...
+2025-11-11 19:49:26,046 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-11-11 19:49:29,244 - PHOTON - INFO - Embeddings model loaded
+2025-11-11 19:49:29,856 - PHOTON - INFO - LLM initialized
+2025-11-11 19:49:29,857 - PHOTON - INFO - Loaded 2 documents
+2025-11-11 19:49:29,902 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-11-11 19:49:29,919 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-11-11 19:49:29,937 - PHOTON - INFO - Agent created successfully
+2025-11-11 19:49:29,938 - PHOTON - INFO - Audio processor started
+2025-11-11 19:49:31,115 - PHOTON - INFO - Recording started
+2025-11-11 19:49:51,666 - PHOTON - INFO - Groq client initialized successfully
+2025-11-11 19:49:51,680 - PHOTON - INFO - Starting PHOTON...
+2025-11-11 19:49:51,681 - PHOTON - INFO - Initializing agent...
+2025-11-11 19:49:51,682 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-11-11 19:49:56,111 - PHOTON - INFO - Embeddings model loaded
+2025-11-11 19:49:56,727 - PHOTON - INFO - LLM initialized
+2025-11-11 19:49:56,729 - PHOTON - INFO - Loaded 2 documents
+2025-11-11 19:49:56,773 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-11-11 19:49:56,789 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-11-11 19:49:56,807 - PHOTON - INFO - Agent created successfully
+2025-11-11 19:49:56,808 - PHOTON - INFO - Audio processor started
+2025-11-11 19:49:59,207 - PHOTON - INFO - Recording started
+2025-11-11 19:50:00,507 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:50:00,771 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:50:00,772 - PHOTON - INFO - Transcription successful: What is my name?...
+2025-11-11 19:50:00,974 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:50:15,430 - PHOTON - INFO - Recording started
+2025-11-11 19:50:18,965 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:50:19,229 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:50:19,230 - PHOTON - INFO - Transcription successful: How about you access your knowledge base?...
+2025-11-11 19:50:19,458 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:50:19,459 - PHOTON - ERROR - Agent execution error: Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.
+2025-11-11 19:50:32,934 - PHOTON - INFO - Recording started
+2025-11-11 19:50:36,290 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:50:36,510 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:50:36,511 - PHOTON - INFO - Transcription successful: Access your knowledge base....
+2025-11-11 19:50:36,721 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:50:36,926 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:50:37,316 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:52:14,765 - PHOTON - INFO - Recording started
+2025-11-11 19:52:17,001 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:52:17,260 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:52:17,261 - PHOTON - INFO - Transcription successful: Try again, bro....
+2025-11-11 19:52:17,484 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:52:17,484 - PHOTON - ERROR - Agent execution error: Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.
+2025-11-11 19:54:11,420 - PHOTON - INFO - Starting PHOTON...
+2025-11-11 19:54:12,078 - PHOTON - INFO - Audio processor started
+2025-11-11 19:54:20,755 - PHOTON - INFO - Recording started
+2025-11-11 19:54:37,174 - PHOTON - INFO - Starting PHOTON...
+2025-11-11 19:54:37,819 - PHOTON - INFO - Audio processor started
+2025-11-11 19:54:40,387 - PHOTON - INFO - Recording started
+2025-11-11 19:54:41,690 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:54:42,266 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:54:42,267 - PHOTON - INFO - Transcription successful: Hello, who are you?...
+2025-11-11 19:54:42,415 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:55:35,954 - PHOTON - INFO - Recording started
+2025-11-11 19:55:38,209 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:55:38,759 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:55:38,760 - PHOTON - INFO - Transcription successful: what is the new knowledge base...
+2025-11-11 19:55:38,964 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:55:39,110 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:55:47,594 - PHOTON - INFO - Recording started
+2025-11-11 19:55:51,131 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:55:51,666 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:55:51,667 - PHOTON - INFO - Transcription successful: what is there in your knowledge base right now tel...
+2025-11-11 19:55:51,837 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:55:51,970 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:55:57,450 - PHOTON - INFO - Recording started
+2025-11-11 19:55:59,883 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:56:00,405 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:56:00,406 - PHOTON - INFO - Transcription successful: Access your damn knowledge bill....
+2025-11-11 19:56:00,581 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:56:00,730 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:56:00,860 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:56:06,914 - PHOTON - INFO - Recording started
+2025-11-11 19:56:09,338 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:56:09,962 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:56:09,963 - PHOTON - INFO - Transcription successful: How many properties are there in India?...
+2025-11-11 19:56:10,144 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:56:10,287 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:56:29,938 - PHOTON - INFO - Recording started
+2025-11-11 19:56:31,055 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:56:31,560 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:56:31,561 - PHOTON - INFO - Transcription successful: Thank you....
+2025-11-11 19:56:31,718 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:56:33,818 - PHOTON - INFO - Recording started
+2025-11-11 19:56:35,130 - PHOTON - INFO - Recording finished successfully
+2025-11-11 19:56:35,626 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 19:56:35,627 - PHOTON - INFO - Transcription successful: ....
+2025-11-11 19:56:35,770 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 19:56:37,978 - PHOTON - INFO - Recording started
+2025-11-11 20:00:50,133 - PHOTON - INFO - Starting PHOTON...
+2025-11-11 20:00:50,778 - PHOTON - INFO - Audio processor started
+2025-11-11 20:01:03,710 - PHOTON - INFO - Recording started
+2025-11-11 20:01:09,289 - PHOTON - INFO - Recording finished successfully
+2025-11-11 20:01:09,891 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-11-11 20:01:09,893 - PHOTON - INFO - Transcription successful: Can you access your knowledge base file and give m...
+2025-11-11 20:01:10,059 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 20:01:10,224 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 20:01:14,950 - PHOTON - INFO - Recording started

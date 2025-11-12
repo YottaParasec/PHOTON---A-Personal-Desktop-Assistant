@@ -27,10 +27,11 @@ llama-index-llms-ollama = "*"
 llama-index = "*"
 soundfile = "*"
 langchain-core = "*"
-langchain = "*"
 langchain-community = "*"
 langchain-groq = "*"
 faiss-cpu = "*"
+langchain = "*"
+langchain-classic = "*"
 
 [dev-packages]
 
